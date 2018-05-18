@@ -1,0 +1,7 @@
+static
+node_modules
+*.log
+log
+logs
+*.lock
+package-lock.json

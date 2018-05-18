@@ -1,0 +1,12 @@
+version: '3'
+services:
+    web:
+      build: .
+      depends_on:
+        - db
+      environment:
+        - MONGO_DB_URI=mongodb://db:27017/dbUsers
+    db:
+      image: mongo:latest
+      ports: 
+        - 27017:27017 
