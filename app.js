@@ -88,7 +88,7 @@ server.get(
 )
 
 server.get(
-    '/api/logs/:token',
+    '/api/logs/:username',
     function(req, res, next) {
         const username = req.params.username
 
@@ -272,7 +272,6 @@ server.post(
     }
 )
 
-server.listen(8080, '0.0.0.0', function() {
+server.listen(8080, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
-

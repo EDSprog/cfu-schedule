@@ -9,19 +9,19 @@ module.exports = merge(
   'devServer': {
     'hot': true,
     'port': 9000,
-    'host': '0.0.0.0',
+    //'host': '0.0.0.0',
     'open': true,
     'proxy': {
         '/api': {
-            'target': 'http://0.0.0.0:8080',
+            'target': 'http://localhost:8080',
             'changeOrigin': true
         },
         '/static': {
-          target: 'http://0.0.0.0:9000',
+          target: 'http://localhost:9000',
           pathRewrite: {'^/static': ''}
         },
         '*': {
-                'target': 'http://0.0.0.0:9000',
+                'target': 'http://localhost:9000',
                 pathRewrite() {
                   return '/static/html/index.html'
                 }
